@@ -1,0 +1,71 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+nav{
+    width: 100%;
+    height: 5em;
+    background-color: #bbdfc8;
+    display: flex;
+    justify-content: flex-start;
+    padding: 1em;
+
+}
+.meram-menu{
+    height: 100%;
+    width: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    cursor: pointer;
+   
+}
+.meram-bar{
+    width: 4em;
+    height: 0.5em;
+    background-color: black;
+    border-radius: 0.5em;
+}
+.menu{
+    width: 25%;
+    height: 100vh;
+    background-color: #ffc478;
+    transition: .3 ease-in;
+    position: absolute;
+    top: 0;
+    z-index: -12;
+    transform: translateX(-100%);
+}
+.visible{
+    display: inherit;
+    transform: translateX(0); 
+}
+.meram-bar.clicked:nth-child(1){
+    transform: rotate(45deg) translate(0.75em,1.25em);
+    transition: ease-in .5s;
+}
+.meram-bar.clicked:nth-child(2){
+    transform: scale(.1);
+    transition: ease-in .5s;
+}
+.meram-bar.clicked:nth-child(3){
+    transform: rotate(135deg) translate(-0.5em,1em);
+    transition: ease-in .5s;
+}
+.meram-bar.unclicked{
+    transform: rotate(0) translate(0);
+    transition: .3s ease;
+}
+h3{
+    color: black;
+    font-size: 25px;
+    position: relative;
+    top: 3em;
+    margin: 15px;
+    letter-spacing: 3px;
+    background-color: #bbdfc8;
+    padding: 10px;
+    border-radius: 10px;
+}
